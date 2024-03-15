@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>api request tester</title>
+    <!-- ============================= custom css file ============================= -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <div class="overlay-notification-container">
+      <div class="overlay-notification-box">
+        <p class="notification-text">are you sure you want to add more query parameters</p>
+        <button class="yes-addmore-query-parameters">ok</button>
+      </div>
+    </div>
+    <div class="project-description-container">
+      <h2 class="headline">api request tester</h2>
+      <p class="description">test your GET and POST requests</p>
+    </div>
+    <div class="api-request-tester-container">
+      <div id="api-request-tester-form">
+        <!-- ============================= input url box ============================= -->
+        <div class="formfields urlbox">
+          <label for="input-url" name="url-label">URL</label>
+          <input type="url" name="url" id="input-url" placeholder="Enter URL here" class="inputfields" />
+        </div>
+        <!-- ============================= get and post request type radio btns ============================= -->
+        <div class="formfields request-type-container">
+          <p class="request-type-text">Request Type</p>
+          <div class="request-type-radio-btns-container">
+            <div class="input-radiobtns-group">
+              <input type="radio" name="request-type-radio-btns" value="get" id="getrequest-radiobtn" class="inputfields">  
+              <label for="getrequest-radiobtn" name="request-type-radio-btns-label">GET</label>
+            </div>
+            <div class="input-radiobtns-group">
+              <input type="radio" name="request-type-radio-btns" value="post" id="postrequest-radiobtn" class="inputfields"> 
+              <label for="postrequest-radiobtn" name="request-type-radio-btns-label">POST</label>
+            </div>
+          </div>
+        </div>
+        <!-- ============================= content type json body or query parameters ============================= -->
+        <div class="formfields content-type-container">
+          <p class="content-type-text">Content Type</p>
+          <div class="content-type-radio-btns-container">
+            <div class="input-radiobtns-group">
+              <input type="radio" name="content-type-radio-btns" value="json" id="json-radiobtn" class="inputfields">
+              <label for="json-radiobtn" name="content-type-radio-btns-label">JSON</label>
+            </div>
+            <div class="input-radiobtns-group">
+              <input type="radio" name="content-type-radio-btns" value="queryparameters" id="query-parameters-radiobtn" class="inputfields">
+              <label for="query-parameters-radiobtn" name="content-type-radio-btns-label">Query Parameters</label>
+            </div>
+          </div>
+        </div>
+        <!-- ============================= request json body text ============================= -->
+        <div class="formfields request-jsonbody-textarea-container">
+          <div class="requestjson-bodytext-container">
+            <label for="requestjson-bodytext-label" name="requestjson-bodytext-label">Enter Request JSON</label>
+            <textarea name="requestjson" class="inputfields" id="input-request-jsonbody-textarea" cols="20" rows="3" placeholder="Enter your JSON request"></textarea>
+          </div>
+        </div>
+        <!-- ============================= query parameters ============================= -->
+        <div class="formfields add-delete-query-parameters-container">
+          <div class="query-parameters-container">
+            <div class="query-parameters-key-container">
+              <input type="text" name="query-parameters-key" class="input_query_parameters_key" id="input-query-parameters-key-1" placeholder="Enter your key">
+            </div>
+            <div class="query-parameters-value-container">
+              <input type="text" name="query-parameters-value" class="input_query_parameters_value" id="input-query-parameters-value-1" placeholder="Enter your value">
+            </div>
+            <button id="addmore-query-parameter-btn" type="button">+</button>
+          </div>
+        </div>
+        <button id="submitbtn" class="api-response-submission-btn">submit</button>
+      </div>
+      <div class="api-response-container">
+        <div class="api-response-box">
+          <label for="api-response" name="api-response-label">Resonse</label>
+          <textarea name="api-response-textarea" id="input-api-response-textarea" cols="30" rows="10" placeholder="Your response will appear here"></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= custom js file ============================= -->
+    <script src="main.js"></script>
+  </body>
+</html>
